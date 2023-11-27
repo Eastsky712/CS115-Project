@@ -140,7 +140,7 @@ public class GamePanel extends JPanel implements Runnable {
 
             g.setFont(new Font("Arial", Font.BOLD, 20));
             g.setColor(Color.WHITE);
-            g.drawString("Level: " + currentLevel, getWidth() / 2, 20);
+            g.drawString("Level: " + currentLevel, (getWidth() / 2) - 35, 20);
 
             g.setFont(new Font("Arial", Font.BOLD, 20));
             g.setColor(Color.WHITE);
