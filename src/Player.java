@@ -1,17 +1,11 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import java.awt.image.BufferedImage;
 
 public class Player extends JComponent{
     private int playerHealth;
     private int playerVelocity;
     private int playerX;
     private int playerY;
-    private Timer t;
     private static final int DEFAULT_PLAYER_HEALTH = 3;
     private static final int DEFAULT_PLAYER_VELOCITY = 5;
     private static final int DEFAULT_PLAYER_X = 50;
@@ -38,6 +32,15 @@ public class Player extends JComponent{
     }
     public int getPlayerVelocity(){
         return playerVelocity;
+    }
+    public void reduceHealth(int amount){
+        playerHealth = playerHealth - amount;
+    }
+    public int getHealth(){
+        return playerHealth;
+    }
+    public void setHealth(int sH){
+        playerHealth = sH;
     }
     public void draw(Graphics g){
         ImageIcon image1 = new ImageIcon(("cannon.png"));
