@@ -1,47 +1,96 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class Bullet extends JComponent{
+/**
+ * The Bullet class represents a projectile in the game.
+ */
+public class Bullet extends JComponent {
     private int bulletVelocity;
     private int bulletX;
     private int bulletY;
     private int targetX;
     private int targetY;
     private static final int DEFAULT_BULLET_VELOCITY = 3;
-    private static final int DEFAULT_BULLET_X = 50;
-    private static final int DEFAULT_BULLET_Y = 840;
     private Image bullet;
     private boolean isPlayerBullet;
-    public Bullet(){
+
+    /**
+     * Default constructor for the Bullet class.
+     */
+    public Bullet() {
         bulletVelocity = DEFAULT_BULLET_VELOCITY;
-        bulletX = DEFAULT_BULLET_X;
-        bulletY = DEFAULT_BULLET_Y;
-        this.targetX = targetX;
-        this.targetY = targetY;
+        bulletX = 0;
+        bulletY = 0;
+        this.targetX = 0;
+        this.targetY = 0;
     }
+
+    /**
+     * Constructor for the Bullet class with specified parameters.
+     *
+     * @param startX          The starting x-coordinate of the bullet.
+     * @param startY          The starting y-coordinate of the bullet.
+     * @param targetX         The target x-coordinate for the bullet.
+     * @param targetY         The target y-coordinate for the bullet.
+     * @param isPlayerBullet  A boolean indicating whether the bullet is from the player.
+     */
     public Bullet(int startX, int startY, int targetX, int targetY, boolean isPlayerBullet) {
         this.isPlayerBullet = isPlayerBullet;
         bulletVelocity = DEFAULT_BULLET_VELOCITY;
         bulletX = startX;
         bulletY = startY;
-        this.targetX = targetX; // Assign the targetX and targetY here
+        this.targetX = targetX;
         this.targetY = targetY;
     }
-    public void setBulletX(int nX){
+
+    /**
+     * Method to set the x-coordinate of the bullet.
+     *
+     * @param nX The new x-coordinate for the bullet.
+     */
+    public void setBulletX(int nX) {
         bulletX = nX;
     }
-    public void setBulletY(int nY){
+
+    /**
+     * Method to set the y-coordinate of the bullet.
+     *
+     * @param nY The new y-coordinate for the bullet.
+     */
+    public void setBulletY(int nY) {
         bulletY = nY;
     }
-    public int getBulletX(){
+
+    /**
+     * Method to get the x-coordinate of the bullet.
+     *
+     * @return The x-coordinate of the bullet.
+     */
+    public int getBulletX() {
         return bulletX;
     }
-    public int getBulletY(){
+
+    /**
+     * Method to get the y-coordinate of the bullet.
+     *
+     * @return The y-coordinate of the bullet.
+     */
+    public int getBulletY() {
         return bulletY;
     }
-    public int getBulletVelocity(){
+
+    /**
+     * Method to get the velocity of the bullet.
+     *
+     * @return The velocity of the bullet.
+     */
+    public int getBulletVelocity() {
         return bulletVelocity;
     }
+
+    /**
+     * Method to update the position of the bullet based on its direction.
+     */
     public void update() {
         if (isPlayerBullet) {
             // Player bullet goes up
@@ -51,9 +100,21 @@ public class Bullet extends JComponent{
             bulletY += bulletVelocity;
         }
     }
+
+    /**
+     * Method to check if the bullet is from the player.
+     *
+     * @return True if the bullet is from the player, false otherwise.
+     */
     public boolean isPlayerBullet() {
         return isPlayerBullet;
     }
+
+    /**
+     * Method to draw the bullet on the screen.
+     *
+     * @param g The graphics object for rendering.
+     */
     public void draw(Graphics g) {
         ImageIcon image1 = new ImageIcon("bullet.png");
         bullet = image1.getImage();
