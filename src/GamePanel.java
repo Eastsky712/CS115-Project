@@ -164,9 +164,6 @@ public class GamePanel extends JPanel implements Runnable {
                 enemyBullet.draw(g);
             }
 
-            // Update and draw enemy bullets
-            //updateEnemyBullets();
-
             // Update and draw enemies
             for (Enemy enemy : enemies) {
                 enemy.update();
