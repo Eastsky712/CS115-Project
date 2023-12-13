@@ -33,6 +33,7 @@ public class Enemy extends JComponent {
     private static final int DEFAULT_LEVEL = 1;
     private Image badGuy;
     private int movementState;
+    private int strength;
 
     private List<Bullet> bullets;
 
@@ -49,6 +50,7 @@ public class Enemy extends JComponent {
         enemyY = DEFAULT_ENEMY_Y;
         level = DEFAULT_LEVEL;
         movementState = 0;
+        strength = 1;
         bullets = new ArrayList<>();
         scheduleShooting();
     }
@@ -61,7 +63,7 @@ public class Enemy extends JComponent {
      * @param initialY  The initial y-coordinate of the enemy.
      * @param lvl       The level of the enemy.
      */
-    public Enemy(Player player, int initialX, int initialY, int lvl) {
+    public Enemy(Player player, int initialX, int initialY, int lvl, int strength) {
         Random rand = new Random();
         level = lvl;
         enemyHealth = rand.nextInt(1 + (lvl / 3)) + 1;
@@ -70,6 +72,7 @@ public class Enemy extends JComponent {
         enemyX = initialX;
         enemyY = initialY;
         movementState = rand.nextInt(2);
+        this.strength = strength;
         bullets = new ArrayList<>();
         this.targetPlayerX = player.getPlayerX();
         this.targetPlayerY = player.getPlayerY();
@@ -115,11 +118,15 @@ public class Enemy extends JComponent {
         shootingTimer.start();
     }
 
+    public int getStrength() {
+        return strength;
+    }
+
     /**
      * Method to perform shooting by creating a new bullet.
      */
     private void shoot() {
-        Bullet bullet = new Bullet(enemyX, enemyY, targetPlayerX, targetPlayerY, false);
+        Bullet bullet = new Bullet(enemyX, enemyY, false);
         bullets.add(bullet);
     }
 

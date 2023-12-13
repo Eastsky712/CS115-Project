@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e139a8ae-340b-4d99-a476-f86b8193c490" name="Changes" comment="-added documentations" />
+    <list default="true" id="e139a8ae-340b-4d99-a476-f86b8193c490" name="Changes" comment="-added basic attributes for player and enemy&#10;-removed different bullet classes and instead fused them into one">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS115-Project/Bullet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS115-Project/Bullet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS115-Project/Enemy$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS115-Project/Enemy$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS115-Project/Enemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS115-Project/Enemy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS115-Project/GameOverPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS115-Project/GameOverPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS115-Project/GamePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS115-Project/GamePanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS115-Project/KeyHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS115-Project/KeyHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS115-Project/SpaceInvaders.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS115-Project/SpaceInvaders.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Bullet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bullet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Enemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameOverPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameOverPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/KeyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/KeyHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SpaceInvaders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SpaceInvaders.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -61,11 +76,10 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\User\OneDrive\Documents\GitHub\CS115-Project" />
-      <recent name="C:\Users\User\OneDrive\Documents\GitHub\CS115-Project\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\User\OneDrive\Documents\GitHub\CS115-Project" />
       <recent name="C:\Users\User\OneDrive\Documents\GitHub\CS115-Project\src" />
+      <recent name="C:\Users\User\OneDrive\Documents\GitHub\CS115-Project" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -93,57 +107,11 @@
       <option name="project" value="LOCAL" />
       <updated>1700893612920</updated>
     </task>
-    <task id="LOCAL-00003" summary="-added basic attributes for player and enemy&#10;-removed different bullet classes and instead fused them into one">
-      <option name="closed" value="true" />
-      <created>1701067517683</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1701067517683</updated>
-    </task>
-    <task id="LOCAL-00004" summary="-added basic attributes for player and enemy&#10;-removed different bullet classes and instead fused them into one">
-      <option name="closed" value="true" />
-      <created>1701068843216</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1701068843216</updated>
-    </task>
-    <task id="LOCAL-00005" summary="-added documentations">
-      <option name="closed" value="true" />
-      <created>1701100899979</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1701100899979</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
+    <option name="localTasksCounter" value="3" />
     <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="-added basic attributes for player and enemy&#10;-removed different bullet classes and instead fused them into one" />
-    <MESSAGE value="-added documentations" />
-    <option name="LAST_COMMIT_MESSAGE" value="-added documentations" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.util.ConcurrentModificationException" package="java.util" />
-          <option name="timeStamp" value="1" />
-        </breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <option name="LAST_COMMIT_MESSAGE" value="-added basic attributes for player and enemy&#10;-removed different bullet classes and instead fused them into one" />
   </component>
 </project>

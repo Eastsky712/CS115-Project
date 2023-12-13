@@ -34,13 +34,13 @@ public class KeyHandler implements KeyListener {
             leftPressed = true;
         } else if (code == KeyEvent.VK_D) {
             rightPressed = true;
-        } else if (code == KeyEvent.VK_W && bullets == 0 && currentTime - lastBulletTime > bulletCooldown) {
+        } else if ((code == KeyEvent.VK_W || code == KeyEvent.VK_SPACE) && bullets == 0 && currentTime - lastBulletTime > bulletCooldown) {
             bullets = 1;
             lastBulletTime = currentTime;
         }
 
         if (code == KeyEvent.VK_U) {
-            cheatLevel = true;
+            cheatLevel = false;
         }
     }
 

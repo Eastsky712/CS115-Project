@@ -24,5 +24,7 @@ public class SpaceInvaders {
 
         // Start the game thread
         p.startGameThread();
+
     }
+
 }

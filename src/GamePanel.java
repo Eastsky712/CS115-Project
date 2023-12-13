@@ -20,6 +20,9 @@ public class GamePanel extends JPanel implements Runnable {
     // Player lives and current level
     private int playerLives;
     private int currentLevel = 1;
+    private int points = 0;
+    private int finalLevel;
+    private int finalPoints;
 
     // Flag to determine if the game is over
     private boolean gameOver = false;
@@ -66,6 +69,11 @@ public class GamePanel extends JPanel implements Runnable {
      * Method to handle game over logic.
      */
     private void gameOver() {
+        finalLevel = currentLevel;
+        finalPoints = points;
+
+        gameOverPanel.updateGameOverPanel(finalLevel, finalPoints);
+
         gameOver = true;
         repaint();
     }
@@ -123,7 +131,7 @@ public class GamePanel extends JPanel implements Runnable {
 
         // Handle player shooting
         if (keyH.bullets == 1) {
-            bulls.add(new Bullet(p.getPlayerX(), 840,p.getPlayerX(),0,true));
+            bulls.add(new Bullet(p.getPlayerX(), 840,true));
             keyH.bullets = 0;
         }
 
@@ -228,6 +236,9 @@ public class GamePanel extends JPanel implements Runnable {
             g.setColor(Color.WHITE);
             g.drawString("Lives: " + playerLives, 10, getHeight() - 20);
 
+            // Display points
+            g.setColor(Color.WHITE);
+            g.drawString("Points: " + points, 10, 20);
 
             // Update and draw bullets
             Iterator<Bullet> bulletIterator = bulls.iterator();
@@ -276,6 +287,7 @@ public class GamePanel extends JPanel implements Runnable {
         for (int i = 0; i < numEnemies; i++) {
             int randomX;
             int randomY;
+            int randomStrength = currentLevel + random.nextInt(3);
 
             // Generate random spawn positions while avoiding initial overlap
             do {
@@ -284,7 +296,7 @@ public class GamePanel extends JPanel implements Runnable {
             } while (checkInitialOverlap(randomX, randomY));
 
             // Pass the player instance to the Enemy constructor
-            enemies.add(new Enemy(p, randomX, randomY, currentLevel));
+            enemies.add(new Enemy(p, randomX, randomY, currentLevel, randomStrength));
         }
     }
 
@@ -371,6 +383,7 @@ public class GamePanel extends JPanel implements Runnable {
                     if (enemy.getHealth() <= 0) {
                         // Handle enemy defeat
                         enemies.remove(enemy);
+                        points += enemy.getStrength();
                     }
 
                     // Remove the bullet if it hits an enemy

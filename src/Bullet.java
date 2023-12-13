@@ -8,8 +8,6 @@ public class Bullet extends JComponent {
     private int bulletVelocity;
     private int bulletX;
     private int bulletY;
-    private int targetX;
-    private int targetY;
     private static final int DEFAULT_BULLET_VELOCITY = 3;
     private Image bullet;
     private boolean isPlayerBullet;
@@ -21,8 +19,6 @@ public class Bullet extends JComponent {
         bulletVelocity = DEFAULT_BULLET_VELOCITY;
         bulletX = 0;
         bulletY = 0;
-        this.targetX = 0;
-        this.targetY = 0;
     }
 
     /**
@@ -30,17 +26,13 @@ public class Bullet extends JComponent {
      *
      * @param startX          The starting x-coordinate of the bullet.
      * @param startY          The starting y-coordinate of the bullet.
-     * @param targetX         The target x-coordinate for the bullet.
-     * @param targetY         The target y-coordinate for the bullet.
      * @param isPlayerBullet  A boolean indicating whether the bullet is from the player.
      */
-    public Bullet(int startX, int startY, int targetX, int targetY, boolean isPlayerBullet) {
+    public Bullet(int startX, int startY, boolean isPlayerBullet) {
         this.isPlayerBullet = isPlayerBullet;
         bulletVelocity = DEFAULT_BULLET_VELOCITY;
         bulletX = startX;
         bulletY = startY;
-        this.targetX = targetX;
-        this.targetY = targetY;
     }
 
     /**
